@@ -3,6 +3,7 @@ package com.packtpub.wflydevelopment.chapter4.controller;
 import com.google.common.collect.Lists;
 import com.packtpub.wflydevelopment.chapter4.boundary.TheatreBox;
 import com.packtpub.wflydevelopment.chapter4.entity.Seat;
+
 import javax.annotation.PostConstruct;
 import javax.enterprise.event.Observes;
 import javax.enterprise.event.Reception;
@@ -19,10 +20,10 @@ public class TheatreInfo {
 	private TheatreBox box;
 	private Collection<Seat> seats;
 
-	@PostConstruct
-	public void retrieveAllSeatsOrderedByName() {
-		seats = box.getSeats();
-	}
+    @PostConstruct
+    public void retrieveAllSeatsOrderedByName() {
+        this.seats = box.getSeats();
+    }
 
 	@Produces
 	@Named
