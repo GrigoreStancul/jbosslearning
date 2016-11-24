@@ -5,6 +5,7 @@
              version="2.1">
     <persistence-unit name="primary">
 <!-- 		<jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source> -->
+		<jta-data-source>java:jboss/datasources/wflydevelopment</jta-data-source>
         <class>com.packtpub.wflydevelopment.chapter5.entity.Seat</class>
         <class>com.packtpub.wflydevelopment.chapter5.entity.SeatType</class>
 
