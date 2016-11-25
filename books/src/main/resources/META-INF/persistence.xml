@@ -6,8 +6,9 @@
     <persistence-unit name="primary">
 <!-- 		<jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source> -->
 <!-- 		<jta-data-source>java:jboss/datasources/wflydevelopment</jta-data-source> -->
-        <class>com.packtpub.wflydevelopment.chapter5.entity.Seat</class>
-        <class>com.packtpub.wflydevelopment.chapter5.entity.SeatType</class>
+        <class>com.grisha.books.entity.Book</class>
+        <class>com.grisha.books.entity.User</class>
+        <class>com.grisha.books.entity.Review</class>
 
         <properties>
 			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
