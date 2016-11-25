@@ -12,7 +12,8 @@
         <class>com.grisha.books.entity.Review</class>
 
         <properties>
-			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+<!-- 			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/> -->
+			<property name="javax.persistence.schema-generation.database.action" value="none"/>
             <property name="javax.persistence.schema-generation-target" value="scripts"/>
             <property name="javax.persistence.ddl-create-script-target" value="createSeats.sql"/>
             <property name="javax.persistence.ddl-drop-script-target" value="dropSeats.sql"/>
