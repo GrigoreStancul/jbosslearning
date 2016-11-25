@@ -1,5 +1,6 @@
 package com.grisha.books.controller;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.annotation.PostConstruct;
@@ -35,7 +36,7 @@ public class BooksManagementService {
 		newBook = new Book();
 	}
 
-	public void addNewBook() {
+	public void addNewBook() throws Exception {
 		try {
 			log.info("Creating book " + newBook.getTitle());
 			bookDao.persist(newBook);
@@ -45,6 +46,7 @@ public class BooksManagementService {
 			final String errorMessage = ExceptionsUtils.getRootErrorMessage(e);
 			FacesMessage m = new FacesMessage(FacesMessage.SEVERITY_ERROR, errorMessage, "Error while saving data");
 			facesContext.addMessage(null, m);
+			log.log(Level.WARNING, "exception in addNewBook", e);
 		}
 	}
 }

@@ -6,6 +6,7 @@
     <persistence-unit name="primary">
 <!-- 		<jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source> -->
 <!-- 		<jta-data-source>java:jboss/datasources/wflydevelopment</jta-data-source> -->
+ 		<jta-data-source>java:jboss/datasources/booksDS</jta-data-source> 
         <class>com.grisha.books.entity.Book</class>
         <class>com.grisha.books.entity.User</class>
         <class>com.grisha.books.entity.Review</class>

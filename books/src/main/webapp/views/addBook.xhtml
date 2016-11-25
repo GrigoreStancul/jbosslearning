@@ -23,39 +23,39 @@
 				<h:message for="title" errorClass="control-label has-error" />
 			</div>
 
-<!-- 			<div -->
-<!-- 				class="form-group has-feedback #{!author.valid? 'has-error' : ''}"> -->
-<!-- 				<h:outputLabel for="author" value="Author" -->
-<!-- 					styleClass="control-label" /> -->
-<!-- 				<h:inputText id="author" value="#{newBook.author}" -->
-<!-- 					p:placeholder="Enter a author here" class="form-control" -->
-<!-- 					binding="#{author}" /> -->
-<!-- 				<span -->
-<!-- 					class="#{!author.valid ? 'glyphicon glyphicon-remove form-control-feedback' : ''}" /> -->
-<!-- 				<h:message for="author" errorClass="control-label has-error" /> -->
-<!-- 			</div> -->
+			<div
+				class="form-group has-feedback #{!author.valid? 'has-error' : ''}">
+				<h:outputLabel for="author" value="Author"
+					styleClass="control-label" />
+				<h:inputText id="author" value="#{newBook.author}"
+					p:placeholder="Enter a author here" class="form-control"
+					binding="#{author}" />
+				<span
+					class="#{!author.valid ? 'glyphicon glyphicon-remove form-control-feedback' : ''}" />
+				<h:message for="author" errorClass="control-label has-error" />
+			</div>
 
-<!-- 			<div class="form-group has-feedback #{!desc.valid? 'has-error' : ''}"> -->
-<!-- 				<h:outputLabel for="desc" value="Description" -->
-<!-- 					styleClass="control-label" /> -->
-<!-- 				<h:inputText id="desc" value="#{newBook.description}" -->
-<!-- 					p:placeholder="Enter a description here" class="form-control" -->
-<!-- 					binding="#{desc}" /> -->
-<!-- 				<span -->
-<!-- 					class="#{!desc.valid ? 'glyphicon glyphicon-remove form-control-feedback' : ''}" /> -->
-<!-- 				<h:message for="desc" errorClass="control-label has-error" /> -->
-<!-- 			</div> -->
+			<div class="form-group has-feedback #{!desc.valid? 'has-error' : ''}">
+				<h:outputLabel for="desc" value="Description"
+					styleClass="control-label" />
+				<h:inputText id="desc" value="#{newBook.description}"
+					p:placeholder="Enter a description here" class="form-control"
+					binding="#{desc}" />
+				<span
+					class="#{!desc.valid ? 'glyphicon glyphicon-remove form-control-feedback' : ''}" />
+				<h:message for="desc" errorClass="control-label has-error" />
+			</div>
 
-<!-- 			<div class="form-group"> -->
+			<div class="form-group">
 
-<!-- 				<h:commandButton id="Add" -->
-<!-- 					action="#{booksManagementService.addNewBook}" value="Add" -->
-<!-- 					styleClass="btn btn-primary" /> -->
-<!-- 			</div> -->
-<!-- 			<h:messages styleClass="messages" -->
-<!-- 				style="list-style: none; padding:0; margin:0;" -->
-<!-- 				errorClass="alert alert-error" infoClass="alert alert-success" -->
-<!-- 				warnClass="alert alert-warning" globalOnly="true" /> -->
+				<h:commandButton id="Add"
+					action="#{booksManagementService.addNewBook}" value="Add"
+					styleClass="btn btn-primary" />
+			</div>
+			<h:messages styleClass="messages"
+				style="list-style: none; padding:0; margin:0;"
+				errorClass="alert alert-error" infoClass="alert alert-success"
+				warnClass="alert alert-warning" globalOnly="true" />
 
 		</h:form>
 

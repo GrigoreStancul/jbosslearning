@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -29,7 +30,7 @@ public class Book implements Serializable {
 
 	private String description;
 
-	@OneToMany
+	@OneToMany(mappedBy = "book", fetch = FetchType.EAGER)
 	private List<Review> reviews;
 
 	public String getTitle() {
