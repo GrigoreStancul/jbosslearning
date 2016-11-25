@@ -16,7 +16,7 @@ public class Book {
 	private Long id;
 
 	@NotNull
-	private String name;
+	private String title;
 
 	private String author;
 
@@ -24,12 +24,12 @@ public class Book {
 
 	private List<Review> reviews;
 
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getAuthor() {
