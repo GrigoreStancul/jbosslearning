@@ -12,7 +12,12 @@ import java.util.List;
 @TransactionAttribute(TransactionAttributeType.REQUIRED)
 public abstract class AbstractDao<T extends Serializable> implements Serializable {
 
-    private final Class<T> clazz;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private final Class<T> clazz;
 
     @Inject
     private EntityManager em;

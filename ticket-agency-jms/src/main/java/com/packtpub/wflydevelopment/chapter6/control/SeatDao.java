@@ -8,7 +8,12 @@ import javax.ejb.Stateless;
 @Stateless
 public class SeatDao extends AbstractDao<Seat> {
 
-    public SeatDao() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public SeatDao() {
         super(Seat.class);
     }
 }

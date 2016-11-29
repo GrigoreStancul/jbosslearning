@@ -1,11 +1,11 @@
 package com.packtpub.wflydevelopment.chapter6.jms;
 
+import java.util.logging.Logger;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.jms.CompletionListener;
 import javax.jms.Message;
-import javax.jms.TextMessage;
-import java.util.logging.Logger;
 
 @ApplicationScoped
 public class BookingCompletionListener implements CompletionListener {

@@ -8,5 +8,5 @@ import javax.jms.JMSDestinationDefinition;
 )
 public class BookingQueueDefinition {
 
-    public static final String BOOKING_QUEUE = "java:global/jms/bookingQueue";
+    public static final String BOOKING_QUEUE = "java:jboss/jms/bookingQueue";
 }
