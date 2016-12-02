@@ -1,21 +1,26 @@
 package com.packtpub.wflydevelopment.chapter6.jms;
 
+
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
 import javax.inject.Inject;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
+import javax.jms.TextMessage;
+
+import org.jboss.ejb3.annotation.ResourceAdapter;
+
 import java.util.logging.Logger;
 
-@MessageDriven(name = "BookingQueueReceiver", activationConfig = {
-        @ActivationConfigProperty(propertyName = "destinationLookup",
-                propertyValue = BookingQueueDefinition.BOOKING_QUEUE),
+
+@MessageDriven(name = "MDBService", activationConfig = {
+        @ActivationConfigProperty(propertyName = "destination",
+                propertyValue = "java:jboss/activemq/queue/TicketQueue"),
         @ActivationConfigProperty(propertyName = "destinationType",
-                propertyValue = "javax.jms.Queue"),
-        @ActivationConfigProperty(propertyName = "messageSelector",
-                propertyValue = "priority = 'HIGH'"),}
+                propertyValue = "javax.jms.Queue"),}
 )
+@ResourceAdapter(value="activemq-rar-5.14.1.rar")
 public class BookingQueueReceiver implements MessageListener {
 
     @Inject
@@ -24,8 +29,8 @@ public class BookingQueueReceiver implements MessageListener {
     @Override
     public void onMessage(Message message) {
         try {
-            final String text = message.getBody(String.class);
-            logger.info("Received message with HIGH priority: " + text);
+            final TextMessage tm = (TextMessage) message;
+            logger.info("Received message " + tm.getText());
         } catch (JMSException ex) {
             logger.severe(ex.toString());
         }
