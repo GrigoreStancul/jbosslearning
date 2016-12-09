@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pac="http://www.packtpub.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <pac:calculatePower>
+         <base>2</base>
+         <exponent>3</exponent>
+      </pac:calculatePower>
+   </soapenv:Body>
+</soapenv:Envelope>
