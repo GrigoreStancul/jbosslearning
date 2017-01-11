@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="6d8dd3e8-0ab2-47e3-be08-31fd8a15181b" activeEnvironment="Default" name="CalculatePowerService" resourceRoot="" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="55dcfd64-42c6-4f8f-8076-f4babd57a23a" wsaVersion="NONE" name="CalculatePowerServiceSoapBinding" type="wsdl" bindingName="{http://www.packtpub.com/}CalculatePowerServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/ticket-agency-ws/CalculatePowerService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/ticket-agency-ws/CalculatePowerService?wsdl"><con:part><con:url>http://localhost:8080/ticket-agency-ws/CalculatePowerService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="CalculatePowerService" targetNamespace="http://www.packtpub.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.packtpub.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:message name="calculatePowerResponse">
+    <wsdl:part name="result" type="xsd:double"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="calculatePower">
+    <wsdl:part name="base" type="xsd:double"></wsdl:part>
+    <wsdl:part name="exponent" type="xsd:double"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CalculatePowerWebService">
+    <wsdl:operation name="calculatePower">
+      <wsdl:input message="tns:calculatePower" name="calculatePower"></wsdl:input>
+      <wsdl:output message="tns:calculatePowerResponse" name="calculatePowerResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalculatePowerServiceSoapBinding" type="tns:CalculatePowerWebService">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="calculatePower">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="calculatePower">
+        <soap:body namespace="http://www.packtpub.com/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="calculatePowerResponse">
+        <soap:body namespace="http://www.packtpub.com/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalculatePowerService">
+    <wsdl:port binding="tns:CalculatePowerServiceSoapBinding" name="CalculatePowerWebServicePort">
+      <soap:address location="http://localhost:8080/ticket-agency-ws/CalculatePowerService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/ticket-agency-ws/CalculatePowerService</con:endpoint></con:endpoints><con:operation id="3223a674-0022-4d00-a5fb-b8762dce8e73" isOneWay="false" action="" name="calculatePower" bindingOperationName="calculatePower" type="Request-Response" outputName="calculatePowerResponse" inputName="calculatePower" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fb62b0bd-9070-424d-8959-8ac707edaad0" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/ticket-agency-ws/CalculatePowerService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pac="http://www.packtpub.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pac:calculatePower>\r
+         <base>2</base>\r
+         <exponent>3</exponent>\r
+      </pac:calculatePower>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.packtpub.com/CalculatePowerWebService/calculatePower"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
